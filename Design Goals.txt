@@ -1,0 +1,21 @@
+These should be fairly simple.
+
+- Compile a list of movies within the following categories...
+-- Fantasy.
+-- Science Fiction.
+-- Horror.
+
+^- These are forms of data that can be stored in a data structure.
+
+Then, recommend a movie based on someone's chosen preferences.
+
+^- This will require an algorithm to sort or search for data within a data structure.
+
+It's *that* simple. Keep It Simple, Stupid! If you feel like adding more to it after that, then do so.
+
+PROJECT OBJECTIVES
+Store data in a data structure
+Use an algorithm to sort or search for data within a data structure
+Use Git version control
+Use the command line and file navigation
+Write a technical blog post on the project
