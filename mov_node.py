@@ -1,21 +1,30 @@
 # The node class contains the name of the film, genre tags for the film, and a link to the next node.
 
-# class node
-# def __init__(self, film, tag)
-#   film should be the film's title. The "tag" is used as a search filter.
-#   There should also be a self.next_node = None here, so we can set it later for the linked list to function.
+class Node:
+    def __init__(self, film, tag):
+        # film should be the film's title. The "tag" is used as a search filter.
+        self.film = film
+        self.tag = tag
+        # next node creates the daisy chain effect within linked lists so we don't lose old nodes.
+        self.next_node = None
 
-# def get_film(self):
-#   return film title.
+    # function fetches film title.
+    def get_film(self):
+        return self.film
 
-# def get_tag(self):
-#   return the tag, like sci-fi or fantasy. This will later be used by a linked list's search function.
+    # function fetches film's genre tag.
+    def get_tag(self):
+        return self.tag
 
-# def set_tag(self, tag):
-#   set a film's tag. If I'm feeling *really* ambitious, I might try to make it a list containing multiple tags.
+    # function SETS a film's tags, in case they require updating for some reason.
+    # might later change this to handle multiple tags within lists. Not sure yet--basics getting done first.
+    def set_tag(self, tag):
+        self.tag = tag
 
-# def get_next_node(self):
-#    return next node, used in search function to access and continue down the node chain.
+    # Used in linked list search functions.
+    def get_next_node(self):
+        return self.next_node
 
-# def set_next_node(self, next_node):
-#    set the next node so the linked_list daisy chain continues to function.
+    # Used to set one node as linked to another, creating a linear chain of nodes.
+    def set_next_node(self, next_node):
+        self.next_node = next_node
