@@ -9,6 +9,8 @@ Create the data structures to contain the movie-rec-rec-movie code: COMPLETE.
 
 Create the search function that returns data within data structures: COMPLETE.
 
+Create a database of films in at least three different genres: INCOMPLETE.
+
 -- BONUS ROUND --
 
 Prompt the user to give input and check for films with specific tags: INCOMPLETE.
