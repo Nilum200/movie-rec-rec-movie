@@ -1,12 +1,6 @@
-# Going to set up the design first...
-# We'll use this space to test nodes and linked lists, so import both.
-# We'll ultimately refactor once the basic concept works.
-from mov_node import Node
-from mov_linked_list import LinkedList
+# Basic functions now work.
+# Now we need to design something that accepts user input and uses it to return movies.
 
-test_list = LinkedList()
-test_list.add_film("Alien", "Sci-Fi")
-test_list.add_film("Alien 2", "Sci-Fi")
-test_list.add_film("Alien 3", "Sci-Fi")
+from mov_films import movies_list
 
-print(test_list.search_tag("Sci-Fi"))
+print(movies_list.search_tag("Comedy"))
