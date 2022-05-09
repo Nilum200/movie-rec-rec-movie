@@ -25,16 +25,20 @@ class LinkedList:
             # Replace old node with new node, now that new_node points to old_node.
 
     def search_tag(self, tag):
-        pass
-#       return_list = [] <- This is an empty list that will contain all relevant films.
-#       set current_node to self.head.
-#       if current_node is None...
-#           return a line saying the list is empty.
-#       while current_node exists...
-#           if current_node tag is equal to search tag...
-#               append current_node's title to return list.
-#           current_node = get the current node's next node.
-#       if return_list is empty...
-#           return that no films with that tag were found.
-#       else...
-#           return return_list
+        return_list = []
+        # This is an empty list that will contain all relevant films.
+        current_node = self.head
+        if current_node is None:
+            return "Something broke in Linked List's search tag function, Nilum."
+        while current_node:
+            if current_node.get_tag() == tag:
+                # compare current node's tag to the tag within search_tag. Currently strings--simplify later.
+                return_list.append(current_node.get_film())
+                # append current_node's title to return list.
+            current_node = current_node.get_next_node()
+            # this ensures that the while loop will terminate when it runs out of valid nodes.
+            # currently gives an O(N) search time. Could likely be improved if I used a more complex structure...
+        if len(return_list) < 1:
+            return "No films with that tag were found."
+        else:
+            return return_list

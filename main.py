@@ -9,7 +9,4 @@ test_list.add_film("Alien", "Sci-Fi")
 test_list.add_film("Alien 2", "Sci-Fi")
 test_list.add_film("Alien 3", "Sci-Fi")
 
-current_node = test_list.head
-while current_node:
-    print(current_node.get_film())
-    current_node = current_node.get_next_node()
+print(test_list.search_tag("Sci-Fi"))
