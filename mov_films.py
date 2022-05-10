@@ -3,7 +3,7 @@ from mov_linked_list import LinkedList
 
 # Sci-Fi = 1; Fantasy = 2; Horror = 3; Comedy = 4; Superheroes = 5; Drama = 6.
 movies_list = LinkedList()
-movies_list.add_film("Alien", [1, 4])
+movies_list.add_film("Alien", [1, 3])
 movies_list.add_film("Star Wars: A New Hope", [1, 2])
 movies_list.add_film("The Matrix", [1])
 movies_list.add_film("GATTACA", [1])

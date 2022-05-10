@@ -12,7 +12,7 @@ class Chooser:
             count += 1
             choice = input("Choose: ")
             if count == 2:
-                print("A number between 1 to 5 is valid. Try again.\n")
+                print("A number between 1 to 6 is valid. Try again.\n")
             elif count == 5:
                 print("1, not one.\n")
             elif count == 10:
