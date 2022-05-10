@@ -3,9 +3,9 @@
 
 class Chooser:
     @staticmethod
-    # Sci-Fi = 1, Fantasy = 2, Horror = 3, Comedy = 4, Superheroes = 5.
+    # Sci-Fi = 1, Fantasy = 2, Horror = 3, Comedy = 4, Superheroes = 5, Drama = 6.
     def choose():
-        valid_choices = ["1", "2", "3", "4", "5"]
+        valid_choices = ["1", "2", "3", "4", "5", "6"]
         choice = None
         count = 0
         while choice not in valid_choices:

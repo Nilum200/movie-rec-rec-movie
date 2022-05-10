@@ -12,7 +12,7 @@ class Node:
     def get_film(self):
         return self.film
 
-    # function fetches film's genre tag.
+    # function fetches film's genre tags as a list.
     def get_tag(self):
         return self.tag
 
