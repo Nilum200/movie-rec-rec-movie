@@ -29,15 +29,14 @@ class LinkedList:
         # This is an empty list that will contain all relevant films.
         current_node = self.head
         if current_node is None:
-            return "Something broke in Linked List's search tag function, Nilum."
+            return "This list has no movies to search through."
         while current_node:
             if current_node.get_tag() == tag:
-                # compare current node's tag to the tag within search_tag. Currently strings--simplify later.
+                # compare current node's tags to the tag within search_tag.
                 return_list.append(current_node.get_film())
                 # append current_node's title to return list.
             current_node = current_node.get_next_node()
             # this ensures that the while loop will terminate when it runs out of valid nodes.
-            # currently gives an O(N) search time. Could likely be improved if I used a more complex structure...
         if len(return_list) < 1:
             return "No films with that tag were found."
         else:
