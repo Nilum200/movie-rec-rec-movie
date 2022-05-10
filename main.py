@@ -3,4 +3,10 @@
 
 from mov_films import movies_list
 
-print(movies_list.search_tag("Comedy"))
+print("The movie recommender recommends movies!\n")
+print("The movie recommender which recommends movies has the following genres to choose from: ")
+print("1) Sci-Fi 2) Fantasy 3) Horror 4) Comedy 5) Superheroes")
+print("Type the number associated to the genre you'd like to be recommended.\n")
+# call chooser function here.
+
+print(movies_list.search_tag(4))
