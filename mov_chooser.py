@@ -5,20 +5,31 @@ class Chooser:
     @staticmethod
     # Sci-Fi = 1, Fantasy = 2, Horror = 3, Comedy = 4, Superheroes = 5, Drama = 6.
     def choose():
-        valid_choices = ["1", "2", "3", "4", "5", "6"]
-        choice = None
-        count = 0
-        while choice not in valid_choices:
-            count += 1
-            choice = input("Choose: ")
-            if count == 2:
-                print("A number between 1 to 6 is valid. Try again.\n")
-            elif count == 5:
-                print("1, not one.\n")
-            elif count == 10:
-                print("You'll figure it out, I'm sure!\n")
-            elif count == 9000:
-                print("Very funny. Won't you get bored at some point?\n")
-        # choice will loop until a valid choice is presented.
-        return int(choice)
-        # convert choice into an integer, which is then returned for use in the linked_list film search function.
+        valid_choices = [1, 2, 3, 4, 5, 6]
+        choices = []
+        exit_condition = False
+        # Always have a terminator for infinite loops, lest yee be lost in math wilderness...
+        while exit_condition is False:
+            print("Current user search list: {0}".format(choices))
+            print("1) Sci-Fi 2) Fantasy 3) Horror 4) Comedy 5) Superheroes 6) Drama\n")
+            print("Enter '0' to stop selecting genres and initiate the search at any time!\n")
+            print("Type a number to add or remove it from your search list...")
+            choice = input("Input: ")
+            int_choice = int(choice)
+            # Convert choice to an integer here and clearly mark it with its own variable so I don't forget.
+            if int_choice in choices:
+                print("Removing {0}".format(choice))
+                choices.remove(int_choice)
+                # If the choice is already in choices, remove it.
+            elif int_choice in valid_choices:
+                print("Adding {0}".format(choice))
+                choices.append(int_choice)
+                # if the choice is not in choices and is a valid choice, add it.
+            elif choice == "0":
+                exit_condition = True
+                # allow user to terminate loop when they see fit.
+            else:
+                print("Invalid choice--type one number, like 1 for sci-fi, or 3 for horror.\n\n")
+                # if none of the above are valid, the user didn't present a valid choice.
+        return choices
+        # return the list, even if it's empty. The search function in linked list will take care of things from here.
